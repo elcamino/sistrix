@@ -357,4 +357,125 @@ describe "Sistrix" do
 
   end
 
+  it "domain_social_overview(:domain => '#{domain}') returns the social network stats for the given domain" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/domain.social.overview?api_key=&domain=#{domain}").to_return(File.new(File.join(xml_base, 'domain.social.overview.xml')))
+    res = Sistrix.domain_social_overview(:domain => domain)
+
+    res.credits.should == 3
+    res.twitter.should == 557071
+    res.facebook.should == 1335512
+    res.googleplus.should == 27531
+  end
+
+  it "domain_social_top(:domain => '#{domain}', :network => [facebook|twitter|googleplus], :num => [number_of_results]) returns a list of the urls with the most social network votes for the given domain" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/domain.social.top?api_key=&domain=#{domain}&network=&num=10").to_return(File.new(File.join(xml_base, 'domain.social.top.xml')))
+    res = Sistrix.domain_social_top(:domain => domain, :num => 10)
+
+    #
+    # credits
+    #
+    res.credits.should == 10
+
+    #
+    # urls
+    #
+    res.urls.size.should == 10
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/datenschutz/malte-spitz-vorratsdaten' }
+    u.should be
+    u.votes.should == 109822
+    u.network.should == 'total'
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/2011/22/DOS-G8' }
+    u.should be
+    u.votes.should == 82933
+    u.network.should == 'total'
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/datenschutz/malte-spitz-data-retention' }
+    u.should be
+    u.votes.should == 36029
+    u.network.should == 'total'
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/datenschutz/malte-spitz-vorratsdaten/' }
+    u.should be
+    u.votes.should == 28329
+    u.network.should == 'total'
+    u = nil
+
+
+  end
+
+  it "domain_social_latest(:domain => '#{domain}', :network => [facebook|twitter|googleplus], :num => [number_of_results]) returns a list of the most recent urls that have received a social network vote for the given domain" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/domain.social.latest?api_key=&domain=#{domain}&network=&num=10").to_return(File.new(File.join(xml_base, 'domain.social.latest.xml')))
+    res = Sistrix.domain_social_latest(:domain => domain, :num => 10)
+
+    #
+    # credits
+    #
+    res.credits.should == 10
+
+    #
+    # urls
+    #
+    res.urls.size.should == 10
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/2011/38/P-Fahrrad' }
+    u.should be
+    u.date.should == Time.parse('2012-04-10T14:29:42+02:00')
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/politik/2012-04/grass-gedicht-israel-debatte' }
+    u.should be
+    u.date.should == Time.parse('2012-04-10T15:51:23+02:00')
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/lebensart/2012-04/fs-baumeister-der-revolution-5' }
+    u.should be
+    u.date.should == Time.parse('2012-04-10T15:49:53+02:00')
+    u = nil
+
+    u = res.urls.find { |u| u.url == 'http://www.zeit.de/kultur/film/2012-04/work-hard-film' }
+    u.should be
+    u.date.should == Time.parse('2012-04-10T19:57:55+02:00')
+    u = nil
+
+  end
+
+  it "domain_social_url(:domain => '#{domain}', :history => [true|false]) returns a list of social network votes for one url of the given domain" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/domain.social.url?api_key=&domain=#{domain}&history=true").to_return(File.new(File.join(xml_base, 'domain.social.url_with_history.xml')))
+    res = Sistrix.domain_social_url(:domain => domain, :history => true)
+
+    #
+    # credits
+    #
+    res.credits.should == 3
+
+    res.url.should == 'http://www.zeit.de/2011/38/P-Fahrrad'
+    res.total.should == 408
+    res.facebook.should == 260
+    res.twitter.should == 144
+    res.googleplus.should == 4
+
+
+    #
+    # urls
+    #
+    res.history.size.should == 2
+
+    res.history[0].date.should == Time.parse('2012-04-11T16:56:19+02:00')
+    res.history[0].total.should == 408
+    res.history[0].facebook.should == 260
+    res.history[0].twitter.should == 144
+    res.history[0].googleplus.should == 4
+
+    res.history[1].date.should == Time.parse('2012-04-10T15:05:41+02:00')
+    res.history[1].total.should == 408
+    res.history[1].facebook.should == 260
+    res.history[1].twitter.should == 144
+    res.history[1].googleplus.should == 4
+  end
+
 end

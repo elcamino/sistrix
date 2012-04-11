@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 14:36:32 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1089
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.social.top</method>
+  <answer>
+    <url network="total" url="http://www.zeit.de/datenschutz/malte-spitz-vorratsdaten" votes="109822"/>
+    <url network="total" url="http://www.zeit.de/2011/22/DOS-G8" votes="82933"/>
+    <url network="total" url="http://www.zeit.de/datenschutz/malte-spitz-data-retention" votes="36029"/>
+    <url network="total" url="http://www.zeit.de/datenschutz/malte-spitz-vorratsdaten/" votes="28329"/>
+    <url network="total" url="http://www.zeit.de/digital/datenschutz/2011-02/vorratsdaten-malte-spitz" votes="27509"/>
+    <url network="total" url="http://www.zeit.de/2003/48/Gorleben" votes="23339"/>
+    <url network="total" url="http://www.zeit.de/news/index" votes="14375"/>
+    <url network="total" url="http://www.zeit.de/index" votes="13369"/>
+    <url network="total" url="http://www.zeit.de/2011/22/DOS-G8/komplettansicht" votes="10934"/>
+    <url network="total" url="http://www.zeit.de/2011/22/DOS-G8/seite-1" votes="10189"/>
+  </answer>
+  <credits used="10"/>
+</response>

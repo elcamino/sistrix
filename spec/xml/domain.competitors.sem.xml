@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 14:04:43 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 393
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.competitors.sem</method>
+  <answer>
+    <result domain="stepstone.de" match="100"/>
+    <result domain="jobscout24.de" match="49"/>
+    <result domain="monster.de" match="48"/>
+    <result domain="caritas.de" match="37"/>
+    <result domain="fazjob.net" match="29"/>
+  </answer>
+  <credits used="5"/>
+</response>

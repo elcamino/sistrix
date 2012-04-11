@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 14:04:35 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 384
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.competitors.seo</method>
+  <answer>
+    <result domain="facebook.com" match="100"/>
+    <result domain="amazon.de" match="87"/>
+    <result domain="spiegel.de" match="54"/>
+    <result domain="focus.de" match="50"/>
+    <result domain="welt.de" match="38"/>
+  </answer>
+  <credits used="5"/>
+</response>

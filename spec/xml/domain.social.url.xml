@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 15:06:58 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 271
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.social.url</method>
+  <answer>
+    <current url="http://www.zeit.de/2011/38/P-Fahrrad" total="408" facebook="260" twitter="144" googleplus="4"/>
+  </answer>
+  <credits used="1"/>
+</response>

@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 14:24:36 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 304
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.social.overview</method>
+  <answer>
+    <votes network="twitter" value="557071"/>
+    <votes network="facebook" value="1335512"/>
+    <votes network="googleplus" value="27531"/>
+  </answer>
+  <credits used="3"/>
+</response>

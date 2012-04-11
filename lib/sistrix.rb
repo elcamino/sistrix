@@ -21,5 +21,8 @@ module Sistrix
     end
   end
 
+  class ArgumentException < Exception
+  end
+
 end
 

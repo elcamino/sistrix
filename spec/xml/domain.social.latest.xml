@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 14:45:38 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1424
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.social.latest</method>
+  <answer>
+    <url network="total" url="http://www.zeit.de/2011/38/P-Fahrrad" date="2012-04-10T14:29:42+02:00"/>
+    <url network="total" url="http://www.zeit.de/politik/2012-04/grass-gedicht-israel-debatte" date="2012-04-10T15:51:23+02:00"/>
+    <url network="total" url="http://www.zeit.de/lebensart/2012-04/fs-baumeister-der-revolution-5" date="2012-04-10T15:49:53+02:00"/>
+    <url network="total" url="http://www.zeit.de/kultur/film/2012-04/work-hard-film" date="2012-04-10T19:57:55+02:00"/>
+    <url network="total" url="http://www.zeit.de/politik/ausland/2012-04/aegypten-verfassungsgremium-urteil" date="2012-04-10T15:03:41+02:00"/>
+    <url network="total" url="http://www.zeit.de/kultur/2010-05/fs-baku" date="2012-04-09T14:41:21+02:00"/>
+    <url network="total" url="http://www.zeit.de/2012/15/DOS-Rabbiner" date="2012-04-09T08:42:11+02:00"/>
+    <url network="total" url="http://www.zeit.de/lebensart/essen-trinken/2011-04/vorab-baeuerlein-tiere-essen-buch" date="2012-04-09T23:29:27+02:00"/>
+    <url network="total" url="http://www.zeit.de/gesellschaft/schule/2011-04/schule-hirnforschung" date="2012-04-09T08:57:24+02:00"/>
+    <url network="total" url="http://www.zeit.de/politik/ausland/2012-04/syrien-tuerkei-soldaten" date="2012-04-09T13:32:29+02:00"/>
+  </answer>
+  <credits used="10"/>
+</response>

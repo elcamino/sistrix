@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 13:59:12 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 383
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain.competitors.us</method>
+  <answer>
+    <result domain="youtube.com" match="100"/>
+    <result domain="wikimedia.org" match="65"/>
+    <result domain="focus.de" match="43"/>
+    <result domain="welt.de" match="19"/>
+    <result domain="bild.de" match="18"/>
+  </answer>
+  <credits used="5"/>
+</response>
