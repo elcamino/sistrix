@@ -1,6 +1,23 @@
 = sistrix
 
-Description goes here.
+A ruby library for the Sistrix web API 
+(see http://www.sistrix.de/service/docs/api).
+
+== Hello World
+
+Use RubyGems to install sistrix:
+
+  $ gem install sistrix
+
+Provide your API credentials:
+
+  Sistrix.config do |c|
+    c.api_key = YOUR_API_KEY
+  end
+
+Call individual functions:
+
+  data = Sistrix.
 
 == Contributing to sistrix
  

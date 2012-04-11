@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/elcamino/sistrix"
   gem.license = "MIT"
   gem.summary = %Q{Sistrix web API library for ruby}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{A ruby libary for the Sistrix web API}
   gem.email = "elcamino@spyz.org"
   gem.authors = ["Tobias Begalke"]
   # dependencies defined in Gemfile
