@@ -8,7 +8,7 @@ So far, only the domain API is implemented.
 
 Use RubyGems to install sistrix:
 
-  $ gem install sistrix
+  $ gem install elcamino-sistrix
 
 Provide your API credentials:
 
