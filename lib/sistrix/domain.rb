@@ -2,8 +2,8 @@ module Sistrix
 
   require 'sistrix/base'
 
-  class Domain < Sistrix::Base
-    METHOD = 'domain'
+  class Domain
+    include ::Sistrix::Base
 
     attr_reader :credits, :options
 

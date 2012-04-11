@@ -1,5 +1,5 @@
 module Sistrix
-  class Base
+  module Base
     require 'rest-client'
     require 'nokogiri'
 
@@ -11,7 +11,9 @@ module Sistrix
     end
 
     def method_name
-      self.class::METHOD
+      # derive the method name from the class name
+      #
+      self.class.to_s.downcase.sub(/^.+?::/, '').gsub(/::/, '.')
     end
 
     def base_uri

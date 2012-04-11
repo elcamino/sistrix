@@ -1,26 +1,29 @@
 module Sistrix
   require 'sistrix/config'
 
-  autoload :Domain,                   'sistrix/domain'
-  autoload :DomainSichtbarkeitsindex, 'sistrix/domain_sichtbarkeitsindex'
-  autoload :DomainPages,              'sistrix/domain_pages'
-  autoload :DomainPagerank,           'sistrix/domain_pagerank'
-  autoload :DomainAge,                'sistrix/domain_age'
-  autoload :DomainCompetitorsSeo,     'sistrix/domain_competitors_seo'
-  autoload :DomainCompetitorsSem,     'sistrix/domain_competitors_sem'
-  autoload :DomainCompetitorsUs,      'sistrix/domain_competitors_us'
-  autoload :DomainKwcountSeo,         'sistrix/domain_kwcount_seo'
-  autoload :DomainKwcountSem,         'sistrix/domain_kwcount_sem'
-
   SERVICE_HOST = 'api.sistrix.net'
 
-  def self.domain(options = {})
-    ::Sistrix::Domain.new.fetch(options)
+
+  def self.method_missing(sym, *args, &block)
+    clazz_name = 'Sistrix::' + sym.to_s.split(/_/).map { |w| w[0].upcase + w[1..w.length] }.join('::')
+    lib_name   = 'sistrix/' + sym.to_s.gsub(/_/, '/')
+    require lib_name
+
+    clazz = class_from_string(clazz_name)
+    return clazz.new(args[0]).fetch
   end
 
-  def self.domain_sichtbarkeitsindex(options = {})
-    ::Sistrix::DomainSichtbarkeitsindex.new.fetch(options)
+  protected
+
+  def self.class_from_string(str)
+    str.split('::').inject(Object) do |mod, class_name|
+      mod.const_get(class_name)
+    end
   end
+
+end
+
+__END__
 
   def self.domain_pages(options = {})
     ::Sistrix::DomainPages.new.fetch(options)
