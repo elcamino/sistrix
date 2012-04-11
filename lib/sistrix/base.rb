@@ -6,7 +6,17 @@ module Sistrix
     def fetch(options = {})
       @options.merge!(options)
 
-      response = RestClient.get(base_uri, { :params => @options })
+      # use a file, for testing
+      #
+      if @options[:__use_xml_file] &&
+          File.file?(@options[:__use_xml_file]) &&
+          File.readable?(@options[:__use_xml_file])
+
+        response = File.new(@options[:__use_xml_file]).read
+      else
+        response = RestClient.get(base_uri, { :params => @options })
+      end
+
       Nokogiri::XML(response.to_s)
     end
 

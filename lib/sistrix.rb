@@ -10,7 +10,7 @@ module Sistrix
     require lib_name
 
     clazz = class_from_string(clazz_name)
-    return clazz.new(args[0]).fetch
+    return clazz.new(args[0]).call
   end
 
   protected
@@ -23,38 +23,3 @@ module Sistrix
 
 end
 
-__END__
-
-  def self.domain_pages(options = {})
-    ::Sistrix::DomainPages.new.fetch(options)
-  end
-
-  def self.domain_pagerank(options = {})
-    ::Sistrix::DomainPagerank.new.fetch(options)
-  end
-
-  def self.domain_age(options = {})
-    ::Sistrix::DomainAge.new.fetch(options)
-  end
-
-  def self.domain_competitors_seo(options = {})
-    ::Sistrix::DomainCompetitorsSeo.new.fetch(options)
-  end
-
-  def self.domain_competitors_sem(options = {})
-    ::Sistrix::DomainCompetitorsSem.new.fetch(options)
-  end
-
-  def self.domain_competitors_us(options = {})
-    ::Sistrix::DomainCompetitorsUs.new.fetch(options)
-  end
-
-  def self.domain_kwcount_seo(options = {})
-    ::Sistrix::DomainKwcountSeo.new.fetch(options)
-  end
-
-  def self.domain_kwcount_sem(options = {})
-    ::Sistrix::DomainKwcountSem.new.fetch(options)
-  end
-
-end

@@ -1,0 +1,29 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Apr 2012 12:28:42 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1916
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>domain</method>
+  <answer>
+    <option method="domain.sichtbarkeitsindex" url="http://api.sistrix.net/domain.sichtbarkeitsindex?api_key=&amp;domain=sistrix.de" name="SISTRIX Sichtbarkeitsindex"/>
+    <option method="domain.overview" url="http://api.sistrix.net/domain.overview?api_key=&amp;domain=sistrix.de" name="Ueberblick ueber aktuelle Daten zu der Domain"/>
+    <option method="domain.pagerank" url="http://api.sistrix.net/domain.pagerank?api_key=&amp;domain=sistrix.de" name="Google PageRank"/>
+    <option method="domain.pages" url="http://api.sistrix.net/domain.pages?api_key=&amp;domain=sistrix.de" name="Anzahl indexierter Seiten"/>
+    <option method="domain.age" url="http://api.sistrix.net/domain.age?api_key=&amp;domain=sistrix.de" name="Alter der Domain"/>
+    <option method="domain.kwcount.seo" url="http://api.sistrix.net/domain.kwcount.seo?api_key=&amp;domain=sistrix.de" name="Anzahl gefundener Keywords (SEO)"/>
+    <option method="domain.kwcount.sem" url="http://api.sistrix.net/domain.kwcount.sem?api_key=&amp;domain=sistrix.de" name="Anzahl gefundener Keywords (SEM)"/>
+    <option method="domain.social.overview" url="http://api.sistrix.net/domain.social.overview?api_key=&amp;domain=sistrix.de" name="Social-Mediadaten zur Domain"/>
+    <option method="domain.social.url" url="http://api.sistrix.net/domain.social.url?api_key=&amp;domain=sistrix.deurl=history=true" name="Social-Mediadaten zur Domain"/>
+    <option method="domain.social.top" url="http://api.sistrix.net/domain.social.top?api_key=&amp;domain=sistrix.de&amp;network=&amp;num=100" name="Social-Mediadaten zur Domain"/>
+    <option method="domain.social.latest" url="http://api.sistrix.net/domain.social.latest?api_key=&amp;domain=sistrix.de&amp;network=&amp;num=100" name="Social-Mediadaten zur Domain"/>
+  </answer>
+  <credits used="0"/>
+</response>

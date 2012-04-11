@@ -18,13 +18,13 @@ module Sistrix
       end
     end
 
-    def fetch(options = {})
-      data = super(options)
+    def call(options = {})
+      data = fetch(options)
 
       @credits = data.xpath('//credits').first['used'].to_i
       @options = []
       data.xpath('//answer/option').each do |o|
-        @options << ::Sistrix::Domain::Record.new(o)
+        @options << Record.new(o)
       end
 
       self
@@ -33,6 +33,18 @@ module Sistrix
     class Record
       require 'sistrix/record'
       include ::Sistrix::Record
+
+      def method
+        @data[:method]
+      end
+
+      def url
+        @data[:url]
+      end
+
+      def name
+        @data[:name]
+      end
 
       def initialize(xml_node)
         @data = {}
