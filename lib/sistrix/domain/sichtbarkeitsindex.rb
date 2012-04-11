@@ -19,8 +19,8 @@ module Sistrix
         end
       end
 
-      def fetch(options = {})
-        data = super(options)
+      def call(options = {})
+        data = fetch(options)
 
         @credits = data.xpath('//credits').first['used'].to_i
         @sichtbarkeitsindex = []
@@ -39,7 +39,7 @@ module Sistrix
           @data = {}
 
           @data[:domain] = xml_node['domain'].strip
-          @data[:date] = xml_node['date'].strip
+          @data[:date] = Time.parse(xml_node['date'].strip)
           @data[:value] = xml_node['value'].strip.to_f
         end
       end

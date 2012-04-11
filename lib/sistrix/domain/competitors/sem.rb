@@ -21,8 +21,8 @@ module Sistrix
           end
         end
 
-        def fetch(options = {})
-          data = super(options)
+        def call(options = {})
+          data = fetch(options)
 
           @credits = data.xpath('//credits').first['used'].to_i
           @competitors = []
