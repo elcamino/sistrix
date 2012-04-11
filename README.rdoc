@@ -2,6 +2,7 @@
 
 A ruby library for the Sistrix web API 
 (see http://www.sistrix.de/service/docs/api).
+So far, only the domain API is implemented.
 
 == Hello World
 
@@ -17,7 +18,18 @@ Provide your API credentials:
 
 Call individual functions:
 
-  data = Sistrix.
+  data = Sistrix.domain(:domain => 'zeit.de')
+  sichtbarkeitsindex = Sistrix.domain_sichtbarkeitsindex(:domain => 'zeit.de')
+  number_of_pages = Sistrix.domain_pages(:domain => 'zeit.de')
+  pagerank = Sistrix.domain_pagerank(:domain => 'zeit.de')
+  age = Sistrix.domain_age(:domain => 'zeit.de')
+  seo_competitors = Sistrix.domain_competitors_seo(:domain => 'zeit.de')
+  sem_competitors = Sistrix.domain_competitors_sem(:domain => 'zeit.de')
+  us_competitors = Sistrix.domain_competitors_us(:domain => 'zeit.de')
+  kwcount_seo = Sistrix.domain_kwcount_seo(:domain => 'zeit.de')
+  kwcount_sem = Sistrix.domain_kwcount_sem(:domain => 'zeit.de')
+
+
 
 == Contributing to sistrix
  
@@ -31,6 +43,6 @@ Call individual functions:
 
 == Copyright
 
-Copyright (c) 2011 Tobias Begalke. See LICENSE.txt for
+Copyright (c) 2011-2012 Tobias Begalke. See LICENSE.txt for
 further details.
 
