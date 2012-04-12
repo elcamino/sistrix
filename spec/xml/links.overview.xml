@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 10:49:43 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 289
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>links.overview</method>
+  <answer>
+    <total num="2357268"/>
+    <hosts num="84489"/>
+    <domains num="51929"/>
+    <networks num="28613"/>
+    <class_c num="11878"/>
+  </answer>
+  <credits used="25"/>
+</response>
