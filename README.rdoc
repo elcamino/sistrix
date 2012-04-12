@@ -29,7 +29,7 @@ Call individual functions:
   kwcount_seo = Sistrix.domain_kwcount_seo(:domain => 'zeit.de')
   kwcount_sem = Sistrix.domain_kwcount_sem(:domain => 'zeit.de')
 
-You can see all available in the rspec test file "spec/sistrix_spec.rb"
+You can see all available methods in the rspec test files "spec/*_spec.rb"
 
 
 == Contributing to sistrix
