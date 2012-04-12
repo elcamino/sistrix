@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 10:02:15 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 809
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>keyword.domain.seo</method>
+  <answer>
+    <result kw="mobile" position="1" competition="67" traffic="70" url="http://suchen.mobile.de/fahrzeuge/auto/"/>
+    <result kw="mobil" position="1" competition="78" traffic="30" url="http://www.mobile.de/?lang=en"/>
+    <result kw="suzuki samurai" position="1" competition="70" traffic="15" url="http://suchen.mobile.de/fahrzeuge/showDetails.html?id=157082385"/>
+    <result kw="autohandel" position="1" competition="73" traffic="30" url="http://home.mobile.de/"/>
+    <result kw="honda dax" position="1" competition="69" traffic="25" url="http://suchen.mobile.de/fahrzeuge/showDetails.html?id=138897397"/>
+  </answer>
+  <date>2012-04-09T00:00:00+02:00</date>
+  <credits used="5"/>
+</response>

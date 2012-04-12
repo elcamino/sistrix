@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 require 'sistrix'
 require 'pp'
@@ -7,7 +9,7 @@ include WebMock::API
 
 xml_base =  File.join(File.dirname(__FILE__), 'xml')
 domain   = 'zeit.de'
-
+keyword  = 'auto'
 
 describe "Sistrix" do
 
@@ -476,6 +478,233 @@ describe "Sistrix" do
     res.history[1].facebook.should == 260
     res.history[1].twitter.should == 144
     res.history[1].googleplus.should == 4
+  end
+
+  it "keyword(:kw => '[keyword]') returns a list of available API methods for the given keyword" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword?api_key=&kw=#{keyword}").to_return(File.new(File.join(xml_base, 'keyword.xml')))
+    res = Sistrix.keyword(:kw => keyword)
+
+
+    #
+    # credits
+    #
+    res.credits.should == 0
+
+    #
+    # options
+    #
+    res.options.size.should == 3
+
+    res.options[0].method.should == 'keyword.seo'
+    res.options[0].url.should == 'http://api.sistrix.net/keyword.seo?api_key=&kw=auto'
+    res.options[0].name.should == 'Organisches Ranking'
+
+    res.options[1].method.should == 'keyword.sem'
+    res.options[1].url.should == 'http://api.sistrix.net/keyword.sem?api_key=&kw=auto'
+    res.options[1].name.should == 'Bezahlte Werbung'
+
+    res.options[2].method.should == 'keyword.us'
+    res.options[2].url.should == 'http://api.sistrix.net/keyword.us?api_key=&kw=auto'
+    res.options[2].name.should == 'Universal Search-Integrationen'
+
+  end
+
+  it "keyword_seo(:kw => '[keyword]', :num => [number_of_results], :date => [date]) returns a SEO rank list of domains and URLs for the given keyword and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.seo?api_key=&date=last%20week&kw=#{keyword}&num=10&url=").to_return(File.new(File.join(xml_base, 'keyword.seo.xml')))
+    res = Sistrix.keyword_seo(:kw => keyword, :num => 10, :date => 'last week')
+
+    #
+    # credits
+    #
+    res.credits.should == 10
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-02T00:00:00+02:00')
+
+    #
+    # results
+    #
+    res.results.size.should == 10
+
+    r = res.results.find { |r| r.position == 1 }
+    r.should be
+    r.position.should == 1
+    r.domain.should == 'auto.de'
+    r.url.should == 'http://www.auto.de/'
+
+    r = res.results.find { |r| r.position == 10 }
+    r.should be
+    r.position.should == 10
+    r.domain.should == 'bmw.de'
+    r.url.should == 'http://www.bmw.de/'
+
+  end
+
+  it "keyword_seo(:kw => '[keyword]', :num => [number_of_results], :date => [date], :url => [url]) returns the current SEO position for the given keyword, date and url" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.seo?api_key=&date=last%20week&kw=#{keyword}&num=10&url=http://www.autobild.de/").to_return(File.new(File.join(xml_base, 'keyword.seo_with_url.xml')))
+    res = Sistrix.keyword_seo(:kw => keyword, :num => 10, :date => 'last week', :url => 'http://www.autobild.de/')
+
+    #
+    # credits
+    #
+    res.credits.should == 1
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-02T00:00:00+02:00')
+
+    #
+    # results
+    #
+    res.results.size.should == 1
+
+    r = res.results[0]
+    r.should be
+    r.position.should == 4
+    r.domain.should == 'autobild.de'
+    r.url.should == 'http://www.autobild.de/'
+  end
+
+  it "keyword_sem(:kw => '[keyword]', :num => [number_of_results], :date => [date]) returns a list of SEM bookings for the given keyword and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.sem?api_key=&date=now&domain=&kw=#{keyword}&num=3").to_return(File.new(File.join(xml_base, 'keyword.sem.xml')))
+    res = Sistrix.keyword_sem(:kw => keyword, :num => 3, :date => 'now')
+
+    #
+    # credits
+    #
+    res.credits.should == 3
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-09T00:00:00+02:00')
+
+    #
+    # results
+    #
+    r = res.results[0]
+    r.should be
+    r.position.should == 1
+    r.title.should == 'mobile.de - Deutschlands größter Fahrzeugmarkt.'
+    r.text.should == 'Welcher ist dein Nächster?  Geprüfte Gebrauchtwagen - Günstige Jahreswagen - Neuwagen - Limousine'
+    r.displayurl.should == 'www.mobile.de/'
+
+  end
+
+  it "keyword_sem(:kw => '[keyword]', :num => [number_of_results], :date => [date], :domain => [domain]) returns a list of SEM bookings for the given keyword, domain and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.sem?api_key=&date=now&domain=mobile.de&kw=#{keyword}&num=3").to_return(File.new(File.join(xml_base, 'keyword.sem_with_domain2.xml')))
+    res = Sistrix.keyword_sem(:kw => keyword, :num => 3, :date => 'now', :domain => 'mobile.de')
+
+    #
+    # credits
+    #
+    res.credits.should == 1
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-09T00:00:00+02:00')
+
+    #
+    # results
+    #
+    r = res.results[0]
+    r.should be
+    r.position.should == 1
+    r.title.should == 'mobile.de - Deutschlands größter Fahrzeugmarkt.'
+    r.text.should == 'Welcher ist dein Nächster?  Geprüfte Gebrauchtwagen - Günstige Jahreswagen - Neuwagen - Limousine'
+    r.displayurl.should == 'www.mobile.de/'
+
+  end
+
+  it "keyword_us(:kw => '[keyword]', :date => [date]) returns a list of Universal Search integration for the given keyword and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.us?api_key=&date=now&kw=angela+merkel").to_return(File.new(File.join(xml_base, 'keyword.us.xml')))
+    res = Sistrix.keyword_us(:kw => 'angela merkel', :date => 'now')
+
+    #
+    # credits
+    #
+    res.credits.should == 9
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-09T00:00:00+02:00')
+
+    #
+    # results
+    #
+    res.results.size.should == 9
+
+    r = res.results[0]
+    r.should be
+    r.type.should == 'x'
+    r.position.should == 6
+    r.position_intern.should == 'x'
+    r.url.should == 'hxxxx//xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx/xxxx/xx/xxxxxx-xxxxxxx.xxx'
+
+  end
+
+
+  it "keyword_domain_seo(:kw => '[keyword]', :date => [date], :domain => [domain], :num => [number_of_results]) returns a list of keyword rankings for the given domain and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.domain.seo?api_key=&date=now&domain=mobile.de&from_pos=&host=&num=5&path=&search=&to_pos=&url=").to_return(File.new(File.join(xml_base, 'keyword.domain.seo.xml')))
+    res = Sistrix.keyword_domain_seo(:date => 'now', :domain => 'mobile.de', :num => 5)
+
+    #
+    # credits
+    #
+    res.credits.should == 5
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-04-09T00:00:00+02:00')
+
+    #
+    # results
+    #
+    res.results.size.should == 5
+
+    r = res.results[0]
+    r.should be
+    r.kw.should == 'mobile'
+    r.position.should == 1
+    r.competition.should == 67
+    r.traffic.should == 70
+    r.url.should == 'http://suchen.mobile.de/fahrzeuge/auto/'
+
+  end
+
+  it "keyword_domain_sem(:date => [date], :domain => [domain], :num => [number_of_results]) returns a list of keywords with SEM bookings for the given domain and date" do
+    stub_request(:get, Sistrix::SERVICE_HOST + "/keyword.domain.us?api_key=&date=now&domain=mobile.de&num=5&search=").to_return(File.new(File.join(xml_base, 'keyword.domain.us.xml')))
+    res = Sistrix.keyword_domain_us(:date => 'now', :domain => 'mobile.de', :num => 5)
+
+    #
+    # credits
+    #
+    res.credits.should == 5
+
+    #
+    # date
+    #
+    res.date.should == Time.parse('2012-01-16T00:00:00+01:00')
+
+    #
+    # results
+    #
+    res.results.size.should == 5
+
+    r = res.results[0]
+    r.should be
+    r.kw.should == 'hxxxxxxx xxxxxxxx'
+    r.type.should == 'x'
+    r.position.should == 'x'
+    r.position_intern.should == 'x'
+    r.competition.should == 'xx'
+    r.traffic.should == 'xx'
   end
 
 end

@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 08:55:25 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 525
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>keyword</method>
+  <answer>
+    <option method="keyword.seo" url="http://api.sistrix.net/keyword.seo?api_key=&amp;kw=auto" name="Organisches Ranking"/>
+    <option method="keyword.sem" url="http://api.sistrix.net/keyword.sem?api_key=&amp;kw=auto" name="Bezahlte Werbung"/>
+    <option method="keyword.us" url="http://api.sistrix.net/keyword.us?api_key=&amp;kw=auto" name="Universal Search-Integrationen"/>
+  </answer>
+  <credits used="0"/>
+</response>

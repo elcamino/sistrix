@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 09:47:56 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1690
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>keyword.us</method>
+  <answer>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxxxxxxxxx.xxxxx.xxxxxxxxx.xxx/xxxx/xx/xxxxxx-xxxxxxx.xxx"/>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxx.xxxxxxxxxxxxxxx.xx/xxxx/xx/xx/xxxxxx-xxxxxx/xxxxxx/xxxxxxxxx/xxxxxx/xx-xxxxxx-xxxxxx.xxxxxxxxxxxxxxxxx"/>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxxxxx.xxxxxxxxx.xxx/xxxxxxxxx/xxxxxxx/xxxxx/x/xx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxx/xxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxx"/>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxxx.xxxxxxx.xxx/xxxxx/xxxx-xxxxxx/xxxxxx/xxxxxx-xxxxxxxxxxx.xxx"/>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxx.xxxxxxxxxxxxx.xx/xx-xxxxxxx/xxxxxxx/xxxx/xx/xxxxx-xxxxxxxxxxxxx.xxx"/>
+    <result type="x" position="6" position.intern="x" url="hxxxx//xxxxxxx.xx/xx-xxxxxxx/xxxxxxx/xxxx/xx/xxxxxx-xxxxxx.xxx"/>
+    <result type="x" position="12" position.intern="x" url="hxxxx//xxx.xxxxx.xx/xxxxxxxx/xxxx/xxxxxxxxxxxxxxxxx/xxxxxxxxx-xxxx-xxxxxxxxxxxx-xxxxxx-xxxxxx-xxxxx-xxxxxxx-xxxxxxxxxxxxxxxx-xxxxxxx-xxxxxxxxxxxxxxxxx.xxxx"/>
+    <result type="x" position="12" position.intern="x" url="hxxxx//xxx.xxxxx.xx/xxxxxxx/xxxxxxxxxxx/xxxxxxxxxxxxx-xxxxx-xxxxxxxxxxxxxx-xxxxxx-xxxxxxx-xxx-xxxxxxxxx-xxxxxxx.xxxx"/>
+    <result type="x" position="12" position.intern="x" url="hxxxx//xxx.xxx.xxx/xxxxxxx/xxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx-xxxxxxxxx-xxxxxx-xxxxx-xxxxxxx-xxxxxxxxxxxxxxxx-xx-xxxxxxxx.xxxx"/>
+  </answer>
+  <date>2012-04-09T00:00:00+02:00</date>
+  <credits used="9"/>
+</response>

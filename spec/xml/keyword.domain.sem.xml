@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 10:15:26 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 558
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>keyword.domain.sem</method>
+  <answer>
+    <result kw="gebrauchtwagen" position="1" competition="93" traffic="100"/>
+    <result kw="autos" position="1" competition="100" traffic="100"/>
+    <result kw="wohnwagen" position="1" competition="88" traffic="100"/>
+    <result kw="pkw" position="1" competition="85" traffic="100"/>
+    <result kw="traktor" position="1" competition="85" traffic="100"/>
+  </answer>
+  <date>2012-04-09T00:00:00+02:00</date>
+  <credits used="5"/>
+</response>

@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Thu, 12 Apr 2012 09:36:41 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 413
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>keyword.sem</method>
+  <answer>
+    <result position="1" title="mobile.de - Deutschlands größter Fahrzeugmarkt." text="Welcher ist dein Nächster?  Geprüfte Gebrauchtwagen - Günstige Jahreswagen - Neuwagen - Limousine" displayurl="www.mobile.de/"/>
+  </answer>
+  <date>2012-04-09T00:00:00+02:00</date>
+  <credits used="1"/>
+</response>
