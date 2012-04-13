@@ -183,8 +183,6 @@ describe "Sistrix.monitoring_report_download(:project => [project], :report => [
 
   it { should be }
 
-  pp subject.call
-
   its("error?") { should be_true }
   its("error.code") { should == '005' }
   its("error.message") { should == 'Date not found' }

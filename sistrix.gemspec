@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sistrix}
-  s.version = "0.0.0"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tobias Begalke"]
-  s.date = %q{2011-09-02}
+  s.date = %q{2012-04-13}
   s.description = %q{A ruby libary for the Sistrix web API}
   s.email = %q{elcamino@spyz.org}
   s.extra_rdoc_files = [
@@ -27,16 +27,80 @@ Gem::Specification.new do |s|
     "lib/sistrix/base.rb",
     "lib/sistrix/config.rb",
     "lib/sistrix/domain.rb",
-    "lib/sistrix/domain_age.rb",
-    "lib/sistrix/domain_competitors_sem.rb",
-    "lib/sistrix/domain_competitors_seo.rb",
-    "lib/sistrix/domain_competitors_us.rb",
-    "lib/sistrix/domain_kwcount_sem.rb",
-    "lib/sistrix/domain_kwcount_seo.rb",
-    "lib/sistrix/domain_pagerank.rb",
-    "lib/sistrix/domain_pages.rb",
-    "lib/sistrix/domain_sichtbarkeitsindex.rb",
+    "lib/sistrix/domain/age.rb",
+    "lib/sistrix/domain/competitors/sem.rb",
+    "lib/sistrix/domain/competitors/seo.rb",
+    "lib/sistrix/domain/competitors/us.rb",
+    "lib/sistrix/domain/kwcount/sem.rb",
+    "lib/sistrix/domain/kwcount/seo.rb",
+    "lib/sistrix/domain/overview.rb",
+    "lib/sistrix/domain/pagerank.rb",
+    "lib/sistrix/domain/pages.rb",
+    "lib/sistrix/domain/sichtbarkeitsindex.rb",
+    "lib/sistrix/domain/social/latest.rb",
+    "lib/sistrix/domain/social/overview.rb",
+    "lib/sistrix/domain/social/top.rb",
+    "lib/sistrix/domain/social/url.rb",
+    "lib/sistrix/keyword.rb",
+    "lib/sistrix/keyword/domain/sem.rb",
+    "lib/sistrix/keyword/domain/seo.rb",
+    "lib/sistrix/keyword/domain/us.rb",
+    "lib/sistrix/keyword/sem.rb",
+    "lib/sistrix/keyword/seo.rb",
+    "lib/sistrix/keyword/us.rb",
+    "lib/sistrix/links/linktargets.rb",
+    "lib/sistrix/links/linktexts.rb",
+    "lib/sistrix/links/list.rb",
+    "lib/sistrix/links/overview.rb",
+    "lib/sistrix/monitoring/folders.rb",
+    "lib/sistrix/monitoring/projects.rb",
+    "lib/sistrix/monitoring/report.rb",
+    "lib/sistrix/monitoring/report/download.rb",
+    "lib/sistrix/monitoring/reports.rb",
     "lib/sistrix/record.rb",
+    "sistrix.gemspec",
+    "spec/sistrix_domain_spec.rb",
+    "spec/sistrix_keyword_spec.rb",
+    "spec/sistrix_links_spec.rb",
+    "spec/sistrix_monitoring_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/xml/domain.age.xml",
+    "spec/xml/domain.competitors.sem.xml",
+    "spec/xml/domain.competitors.seo.xml",
+    "spec/xml/domain.competitors.us.xml",
+    "spec/xml/domain.kwcount.sem.xml",
+    "spec/xml/domain.kwcount.seo.xml",
+    "spec/xml/domain.overview.xml",
+    "spec/xml/domain.pagerank.xml",
+    "spec/xml/domain.pages.xml",
+    "spec/xml/domain.sichtbarkeitsindex.xml",
+    "spec/xml/domain.social.latest.xml",
+    "spec/xml/domain.social.overview.xml",
+    "spec/xml/domain.social.top.xml",
+    "spec/xml/domain.social.url.xml",
+    "spec/xml/domain.social.url_with_history.xml",
+    "spec/xml/domain.xml",
+    "spec/xml/keyword.domain.sem.xml",
+    "spec/xml/keyword.domain.seo.xml",
+    "spec/xml/keyword.domain.us.xml",
+    "spec/xml/keyword.sem.xml",
+    "spec/xml/keyword.sem_with_domain.xml",
+    "spec/xml/keyword.sem_with_domain2.xml",
+    "spec/xml/keyword.seo.xml",
+    "spec/xml/keyword.seo_with_url.xml",
+    "spec/xml/keyword.us.xml",
+    "spec/xml/keyword.us_nodate.xml",
+    "spec/xml/keyword.xml",
+    "spec/xml/links.linktargets.xml",
+    "spec/xml/links.linktexts.xml",
+    "spec/xml/links.list.xml",
+    "spec/xml/links.overview.xml",
+    "spec/xml/monitoring.folders.xml",
+    "spec/xml/monitoring.projects.xml",
+    "spec/xml/monitoring.report.download.pdf",
+    "spec/xml/monitoring.report.download_error.xml",
+    "spec/xml/monitoring.report.xml",
+    "spec/xml/monitoring.reports.xml",
     "test/helper.rb",
     "test/test_sistrix.rb"
   ]
@@ -52,25 +116,31 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
       s.add_runtime_dependency(%q<rest-client>, [">= 1.0"])
+      s.add_development_dependency(%q<rspec>, [">= 1.3.2"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<webmock>, [">= 1.8.6"])
     else
       s.add_dependency(%q<nokogiri>, [">= 0"])
       s.add_dependency(%q<rest-client>, [">= 1.0"])
+      s.add_dependency(%q<rspec>, [">= 1.3.2"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
+      s.add_dependency(%q<webmock>, [">= 1.8.6"])
     end
   else
     s.add_dependency(%q<nokogiri>, [">= 0"])
     s.add_dependency(%q<rest-client>, [">= 1.0"])
+    s.add_dependency(%q<rspec>, [">= 1.3.2"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-    s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
+    s.add_dependency(%q<webmock>, [">= 1.8.6"])
   end
 end
 
