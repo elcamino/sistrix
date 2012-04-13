@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Date: Fri, 13 Apr 2012 08:20:29 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1048
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>links.linktexts</method>
+  <answer>
+    <linktext text="" links="2992" hosts="836" domains="576" nets="327" ips="406"/>
+    <linktext text="Die Zeit" links="4206" hosts="673" domains="481" nets="333" ips="394"/>
+    <linktext text="Zeit" links="1729" hosts="542" domains="360" nets="266" ips="330"/>
+    <linktext text="zeit.de" links="1768" hosts="496" domains="321" nets="181" ips="226"/>
+    <linktext text="ZEIT" links="1054" hosts="302" domains="202" nets="150" ips="181"/>
+    <linktext text="Zeit Online" links="820" hosts="254" domains="201" nets="163" ips="197"/>
+    <linktext text="hier" links="504" hosts="260" domains="177" nets="139" ips="166"/>
+    <linktext text="www.zeit.de" links="1016" hosts="249" domains="158" nets="104" ips="121"/>
+    <linktext text="Zeit.de" links="861" hosts="228" domains="158" nets="89" ips="104"/>
+    <linktext text="N/A" links="172" hosts="140" domains="117" nets="68" ips="77"/>
+  </answer>
+  <credits used="10"/>
+</response>

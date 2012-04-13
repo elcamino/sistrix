@@ -1,0 +1,118 @@
+HTTP/1.1 200 OK
+Date: Fri, 13 Apr 2012 08:17:55 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>links.linktargets</method>
+  <answer>
+    <target url="http://zeit.de/" links="4148" hosts="321" domains="230" nets="185" ips="204"/>
+    <target url="http://www.zeit.de/wissen/index" links="3075" hosts="168" domains="129" nets="95" ips="112"/>
+    <target url="http://www.zeit.de/wirtschaft/index" links="3365" hosts="168" domains="127" nets="90" ips="110"/>
+    <target url="http://www.zeit.de/reisen/index" links="2263" hosts="138" domains="104" nets="69" ips="82"/>
+    <target url="http://zuender.zeit.de/" links="1985" hosts="145" domains="101" nets="82" ips="97"/>
+    <target url="http://www.zeit.de/politik/deutschland/2011-07/norwegen-attentat-politik-deutschland" links="989" hosts="128" domains="98" nets="82" ips="91"/>
+    <target url="http://www.zeit.de/zeit-magazin/index" links="1325" hosts="133" domains="96" nets="81" ips="90"/>
+    <target url="http://www.zeit.de/politik/deutschland/2011-03/atomkraft-zukunft-sicherheit" links="225" hosts="119" domains="78" nets="3" ips="3"/>
+    <target url="http://www.zeit.de/politik/deutschland/2009-12/politik-online-plattformen" links="148" hosts="117" domains="77" nets="2" ips="2"/>
+    <target url="http://www.zeit.de/studium/hochschule/2011-02/fachhochschulen-promotion" links="143" hosts="143" domains="74" nets="2" ips="3"/>
+    <target url="http://www.zeit.de/sport/2011-08/interview-magath-diego-disziplin" links="309" hosts="292" domains="73" nets="29" ips="32"/>
+    <target url="http://www.zeit.de/stimmts" links="235" hosts="89" domains="69" nets="54" ips="63"/>
+    <target url="http://www.zeit.de/schule" links="165" hosts="96" domains="65" nets="42" ips="47"/>
+    <target url="http://zeitreisen.zeit.de/" links="3947" hosts="89" domains="64" nets="42" ips="49"/>
+    <target url="http://www.zeit.de/sport/2011-08/fcbayern-heynckes-hoeness-championsleague" links="353" hosts="242" domains="61" nets="18" ips="21"/>
+    <target url="http://www.zeit.de/wirtschaft/2010-09/atomkraft-sicherheit-gruene" links="97" hosts="91" domains="60" nets="7" ips="7"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-08/italien-schulden-berlusconi-2" links="1258" hosts="80" domains="58" nets="37" ips="44"/>
+    <target url="http://www.zeit.de/politik/deutschland/2010-09/kernkraftwerke-angriff" links="89" hosts="88" domains="57" nets="3" ips="3"/>
+    <target url="http://www.zeit.de/online/2009/26/leyen-heine-netzsperren" links="153" hosts="65" domains="54" nets="54" ips="57"/>
+    <target url="http://www.zeit.de/wissen/" links="607" hosts="69" domains="54" nets="43" ips="44"/>
+    <target url="http://www.zeit.de/sport/index" links="1949" hosts="567" domains="53" nets="41" ips="48"/>
+    <target url="http://www.zeit.de/wissen/gesundheit/index" links="1203" hosts="70" domains="51" nets="30" ips="32"/>
+    <target url="http://www.zeit.de/studium" links="117" hosts="54" domains="51" nets="49" ips="49"/>
+    <target url="http://www.zeit.de/online/2009/26/leyen-heine-netzsperren?page=all" links="162" hosts="59" domains="49" nets="44" ips="50"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-03/atom-strom-gutachten" links="150" hosts="81" domains="48" nets="7" ips="7"/>
+    <target url="http://www.zeit.de/politik/index" links="1354" hosts="63" domains="47" nets="37" ips="42"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/schuldenkrise-usa-europa" links="389" hosts="72" domains="47" nets="37" ips="40"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/barroso-rettungsschirm-euro" links="282" hosts="72" domains="46" nets="36" ips="40"/>
+    <target url="http://www.zeit.de/sport/2011-08/dortmund-hamburg-bundesliga" links="1095" hosts="252" domains="46" nets="36" ips="42"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-07/aethiopien-omo-hunger-staudamm" links="190" hosts="54" domains="46" nets="38" ips="41"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/finanzmaerkte-usa-international" links="180" hosts="61" domains="45" nets="29" ips="32"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/japan-atomlobby" links="101" hosts="49" domains="45" nets="31" ips="35"/>
+    <target url="http://www.zeit.de/studium/index" links="1570" hosts="54" domains="43" nets="34" ips="39"/>
+    <target url="http://www.zeit.de/wirtschaft/geldanlage/2011-08/boerse-einbruch-dax" links="211" hosts="46" domains="42" nets="28" ips="29"/>
+    <target url="http://www.zeit.de/wissen/lebendtl/leben_dtl" links="63" hosts="56" domains="41" nets="17" ips="17"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/fluglotsen-streik-drohung" links="881" hosts="57" domains="41" nets="34" ips="36"/>
+    <target url="http://www.zeit.de/online/2009/26/wahlprogramm-cdu-internet" links="115" hosts="50" domains="41" nets="39" ips="41"/>
+    <target url="http://www.zeit.de/sudoku" links="244" hosts="49" domains="40" nets="29" ips="36"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/usa-arbeitsmarkt-arbeitslosigkeit" links="94" hosts="46" domains="40" nets="24" ips="26"/>
+    <target url="http://www.zeit.de/wissen/2011-08/mond-symmetrie" links="172" hosts="60" domains="40" nets="33" ips="35"/>
+    <target url="http://www.zeit.de/reisen/2011-07/surfen-warnemuende" links="436" hosts="62" domains="40" nets="32" ips="35"/>
+    <target url="http://www.zeit.de/sport/bundesliga-ticker" links="989" hosts="230" domains="39" nets="30" ips="37"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/usa-ratingagentur-schulden" links="97" hosts="43" domains="39" nets="28" ips="28"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-08/usa-senatsabstimmung" links="126" hosts="61" domains="39" nets="25" ips="29"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-07/stoltenberg-norwegen-attentat" links="152" hosts="50" domains="39" nets="37" ips="38"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-08/fukushima-radioaktivitaet-tepco" links="347" hosts="67" domains="38" nets="32" ips="36"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/altenpflege-fachkraeftemangel" links="80" hosts="43" domains="38" nets="26" ips="30"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/steuer-erhoehung-barthle" links="412" hosts="45" domains="38" nets="28" ips="31"/>
+    <target url="http://www.zeit.de/wissen/zeit-wissen/index" links="1197" hosts="49" domains="38" nets="37" ips="38"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-05/atomausstieg-modell" links="127" hosts="64" domains="37" nets="5" ips="5"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-01/interview-el-saddik" links="107" hosts="54" domains="37" nets="35" ips="38"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-08/israel-parlament-wohnungsbau" links="105" hosts="63" domains="37" nets="26" ips="28"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-03/fukushima-massnahmen-reaktoren" links="129" hosts="64" domains="37" nets="5" ips="5"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/eurokrise-ezb-dax" links="182" hosts="60" domains="37" nets="29" ips="33"/>
+    <target url="http://www.zeit.de/stimmts/" links="74" hosts="41" domains="36" nets="27" ips="30"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/fluglotsen-streik-absage" links="160" hosts="55" domains="36" nets="31" ips="32"/>
+    <target url="http://www.zeit.de/reisen/2011-06/palermo" links="413" hosts="57" domains="35" nets="27" ips="30"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-03/interview-atomexperte" links="137" hosts="62" domains="35" nets="3" ips="3"/>
+    <target url="http://www.zeit.de/zeit-wissen/2009/04/Kiosk-Schluss-Mit" links="80" hosts="38" domains="35" nets="33" ips="35"/>
+    <target url="http://www.zeit.de/wirtschaft/unternehmen/2011-08/murdoch-abhoerskandal-mails" links="116" hosts="55" domains="35" nets="22" ips="24"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/usa-china-waehrung-schuldenkrise" links="71" hosts="41" domains="34" nets="28" ips="28"/>
+    <target url="http://www.zeit.de/politik/2011-08/bofinger-euro-maerkte" links="57" hosts="39" domains="34" nets="27" ips="29"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-08/china-taifun-evakuierung" links="393" hosts="61" domains="34" nets="27" ips="32"/>
+    <target url="http://www.zeit.de/politik/2011-08/chaostage-122216" links="103" hosts="40" domains="34" nets="25" ips="26"/>
+    <target url="http://www.zeit.de/wirtschaft/unternehmen/2010-08/laufzeiten-2" links="122" hosts="61" domains="34" nets="2" ips="2"/>
+    <target url="http://www.zeit.de/wirtschaft/unternehmen/2011-08/eon-konzern-mitarbeiter-entlassungen" links="93" hosts="38" domains="34" nets="28" ips="28"/>
+    <target url="http://www.zeit.de/wirtschaft/unternehmen/2010-06/atomsteuer-versorger" links="122" hosts="61" domains="34" nets="2" ips="2"/>
+    <target url="http://www.zeit.de/wissen/gesundheit/2011-07/tk-arbeitslosigkeit-medikamente" links="131" hosts="59" domains="34" nets="30" ips="34"/>
+    <target url="http://www.zeit.de/zeit-wissen/2011/05/Forschungsprojekt-Guardian-Angels" links="120" hosts="50" domains="34" nets="27" ips="30"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-05/reaktor-sicherheitskommission-kritik" links="124" hosts="60" domains="33" nets="1" ips="1"/>
+    <target url="http://www.zeit.de/zeit-wissen/2011/04/Dossier-Esoterik-Esoterisierung" links="108" hosts="45" domains="33" nets="29" ips="29"/>
+    <target url="http://www.zeit.de/reisen/2011-07/bahn-statistik-internet" links="103" hosts="55" domains="33" nets="24" ips="26"/>
+    <target url="http://www.zeit.de/wissen/gesundheit/2011-07/forscher-grippe-impfung" links="1271" hosts="37" domains="33" nets="29" ips="32"/>
+    <target url="http://www.zeit.de/politik/ausland/2010-12/ungarn-mediengesetz-orban" links="64" hosts="34" domains="33" nets="30" ips="32"/>
+    <target url="http://www.zeit.de/politik/ausland/2011-06/seeblockade-gaza-interview" links="65" hosts="42" domains="33" nets="33" ips="33"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/eurokrise-italien-spanien" links="124" hosts="55" domains="33" nets="23" ips="25"/>
+    <target url="http://www2.zeit.de/" links="86" hosts="39" domains="33" nets="29" ips="31"/>
+    <target url="http://www.zeit.de/reisen/2011-07/kanada-weisser-baer" links="448" hosts="41" domains="33" nets="25" ips="28"/>
+    <target url="http://www.zeit.de/wissen" links="47" hosts="38" domains="33" nets="24" ips="27"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-08/ameisenigel-unterschaetztes-tier" links="340" hosts="39" domains="32" nets="24" ips="28"/>
+    <target url="http://www2.zeit.de/bda/int/zeit/" links="38" hosts="36" domains="32" nets="25" ips="31"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/ezb-staatsanleihen-ankauf" links="109" hosts="36" domains="32" nets="24" ips="24"/>
+    <target url="http://www.zeit.de/wissen/gesundheit/2011-08/lerneffekt-epedemie-ehec" links="172" hosts="46" domains="32" nets="25" ips="32"/>
+    <target url="http://www.zeit.de/politik/deutschland/2011-08/Fluglotsen-Arbeitsgericht-Flugsicherung" links="121" hosts="50" domains="32" nets="27" ips="28"/>
+    <target url="http://www.zeit.de/themen/kultur/literatur/luchs" links="151" hosts="40" domains="32" nets="26" ips="28"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/krisengespraech-boersen" links="227" hosts="36" domains="31" nets="26" ips="26"/>
+    <target url="http://www.zeit.de/wissen/2011-08/nasa-mars-wasser" links="70" hosts="35" domains="31" nets="25" ips="27"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-07/Glossar-Euro-Krise" links="1055" hosts="45" domains="31" nets="26" ips="26"/>
+    <target url="http://www.zeit.de/politik/" links="76" hosts="41" domains="31" nets="27" ips="28"/>
+    <target url="http://www.zeit.de/themen/wirtschaft/finanzkrise/index" links="59" hosts="48" domains="31" nets="22" ips="24"/>
+    <target url="http://www.zeit.de/zeit-wissen/2011/04/Antifeatures" links="301" hosts="39" domains="31" nets="27" ips="29"/>
+    <target url="http://www.zeit.de/spiele/index" links="1137" hosts="36" domains="30" nets="23" ips="27"/>
+    <target url="http://www.zeit.de/reisen/2011-07/ile-de-re" links="360" hosts="34" domains="30" nets="22" ips="25"/>
+    <target url="http://www.zeit.de/politik/deutschland/index" links="1143" hosts="46" domains="30" nets="25" ips="29"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/china-rating-usa" links="146" hosts="49" domains="30" nets="25" ips="28"/>
+    <target url="http://www.zeit.de/wissen/geschichte/2011-07/fs-leo-rosenthal" links="70" hosts="36" domains="30" nets="27" ips="29"/>
+    <target url="http://www.zeit.de/wissen/umwelt/2011-08/fukushima-strahlung" links="43" hosts="31" domains="30" nets="26" ips="27"/>
+    <target url="http://www.zeit.de/wirtschaft/2011-08/usa-schulden" links="150" hosts="34" domains="30" nets="23" ips="25"/>
+    <target url="http://www.zeit.de/reisen" links="42" hosts="36" domains="29" nets="19" ips="23"/>
+    <target url="http://www.zeit.de/wissen/2011-08/depressionen-pille" links="101" hosts="33" domains="29" nets="24" ips="29"/>
+  </answer>
+  <credits used="100"/>
+</response>
