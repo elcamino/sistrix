@@ -6,7 +6,7 @@ A ruby library for the Sistrix web API
 
 Use RubyGems to install sistrix:
 
-  $ gem install elcamino-sistrix
+  $ gem install sistrix
 
 Require the library:
 
