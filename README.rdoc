@@ -1,14 +1,17 @@
 = sistrix
 
 A ruby library for the Sistrix web API
-(see http://www.sistrix.de/service/docs/api).
-So far, only the domain API is implemented.
 
-== Hello World
+== How to use Sistrix
 
 Use RubyGems to install sistrix:
 
   $ gem install elcamino-sistrix
+
+Require the library:
+
+  require 'rubygems'
+  require 'sistrix'
 
 Provide your API credentials:
 
@@ -16,7 +19,7 @@ Provide your API credentials:
     c.api_key = YOUR_API_KEY
   end
 
-Call individual functions:
+Call individual functions, e.g.
 
   data = Sistrix.domain(:domain => 'zeit.de')
   sichtbarkeitsindex = Sistrix.domain_sichtbarkeitsindex(:domain => 'zeit.de')
@@ -30,6 +33,13 @@ Call individual functions:
   kwcount_sem = Sistrix.domain_kwcount_sem(:domain => 'zeit.de')
 
 You can see all available methods in the rspec test files "spec/*_spec.rb"
+
+This library supports all available methods. Please refer to the
+documentation at http://www.sistrix.de/service/docs/api. The API
+method domain.overview can be called through
+Sistrix.domain_overview(). Replace the dot in the original method name
+by an underscore (_) and call the method statically on the Sistrix
+class.
 
 
 == Contributing to sistrix
