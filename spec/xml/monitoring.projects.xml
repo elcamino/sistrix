@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 13 Apr 2012 09:52:47 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 1143
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>monitoring.projects</method>
+  <answer>
+    <project name="aaaaaaaaaaa.aa" id="aaaaaaaa"/>
+    <project name="bb bbbbbbbbbbbb bbbbbbbb" id="bbbbbbbb"/>
+    <project name="ccccccccccccccccccc" id="cccccccc"/>
+    <project name="dddddddddd" id="dddddddd"/>
+    <project name="eeeeeeee" id="eeeeeeee"/>
+    <project name="ffffffff" id="ffffffff"/>
+    <project name="gggggggg gg" id="gggggggg"/>
+    <project name="hhhhhhhhhhh" id="hhhhhhhh"/>
+    <project name="iiii iiiiiiii" id="iiiiiiii"/>
+    <project name="jjjjjjjjjj-jjjjjjjjjjj" id="jjjjjjjj"/>
+    <project name="kkkkkkkkkk kkkkkkkkkkk" id="kkkkkkkk"/>
+    <project name="lllllllllll" id="llllllll"/>
+    <project name="mmmmmmmmmmmmm" id="mmmmmmmm"/>
+    <project name="nnnnnnnnnnnn" id="nnnnnnnn"/>
+    <project name="ooo oooooooo oo" id="oooooooo"/>
+    <project name="pppppppppppppppppp p ppppp" id="pppppppp"/>
+    <project name="qqqq" id="qqqqqqqq"/>
+    <project name="rrrr rrrrrrrrrrrr rrrrrrr" id="rrrrrrrr"/>
+    <project name="sssssssssssss" id="ssssssss"/>
+  </answer>
+  <credits used="0"/>
+</response>

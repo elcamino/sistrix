@@ -37,10 +37,6 @@ module Sistrix
         require 'sistrix/record'
         include ::Sistrix::Record
 
-        def text
-          @data[:text]
-        end
-
         def initialize(xml_node)
           @data = {}
 

@@ -1,18 +1,17 @@
 module Sistrix
 
   require 'sistrix/base'
-  class Links
-    class List
+  class Monitoring
+    class Projects
 
       include ::Sistrix::Base
 
-      attr_reader :credits, :links
+      attr_reader :credits, :projects
 
       def initialize(options = {})
         @options = {
-          'domain' => nil,
           'api_key' => Sistrix.config.api_key,
-        }.merge(options)
+        }
 
         if Sistrix.config.proxy
           RestClient.proxy = Sistrix.config.proxy
@@ -24,9 +23,9 @@ module Sistrix
 
         @credits = data.xpath('/response/credits').first['used'].to_i
 
-        @links = []
-        data.xpath('/response/answer/link').each do |r|
-          @links << Record.new(r)
+        @projects = []
+        data.xpath('/response/answer/project').each do |r|
+          @projects << Record.new(r)
         end
 
         self
@@ -39,9 +38,8 @@ module Sistrix
         def initialize(xml_node)
           @data = {}
 
-          @data[:url_from] = xml_node['url.from'].to_s.strip
-          @data[:url_to] = xml_node['url.to'].to_s.strip
-          @data[:text] = xml_node['text'].to_s.strip
+          @data[:name] = xml_node['name'].to_s.strip
+          @data[:id] = xml_node['id'].to_s.strip
         end
       end
 

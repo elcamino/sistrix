@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Date: Fri, 13 Apr 2012 11:57:18 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 228
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response status="fail">
+  <api_key/>
+  <method>monitoring.report.download</method>
+  <answer/>
+  <error error_code="005" error_message="Date not found"/>
+  <credits used="0"/>
+</response>

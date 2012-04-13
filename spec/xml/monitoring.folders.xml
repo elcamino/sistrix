@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Date: Fri, 13 Apr 2012 10:30:17 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 275
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>monitoring.folders</method>
+  <answer>
+    <folder name="aaaaa a aaaa" id="1111" parent="0"/>
+    <folder name="bbbbb b bbbbbbbbbbb" id="2222" parent="0"/>
+  </answer>
+  <credits used="0"/>
+</response>

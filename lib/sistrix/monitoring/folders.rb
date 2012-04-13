@@ -1,16 +1,16 @@
 module Sistrix
 
   require 'sistrix/base'
-  class Links
-    class List
+  class Monitoring
+    class Folders
 
       include ::Sistrix::Base
 
-      attr_reader :credits, :links
+      attr_reader :credits, :folders
 
       def initialize(options = {})
         @options = {
-          'domain' => nil,
+          'project' => nil,
           'api_key' => Sistrix.config.api_key,
         }.merge(options)
 
@@ -24,9 +24,9 @@ module Sistrix
 
         @credits = data.xpath('/response/credits').first['used'].to_i
 
-        @links = []
-        data.xpath('/response/answer/link').each do |r|
-          @links << Record.new(r)
+        @folders = []
+        data.xpath('/response/answer/folder').each do |r|
+          @folders << Record.new(r)
         end
 
         self
@@ -39,9 +39,9 @@ module Sistrix
         def initialize(xml_node)
           @data = {}
 
-          @data[:url_from] = xml_node['url.from'].to_s.strip
-          @data[:url_to] = xml_node['url.to'].to_s.strip
-          @data[:text] = xml_node['text'].to_s.strip
+          @data[:name] = xml_node['name'].to_s.strip
+          @data[:id] = xml_node['id'].to_s.strip
+          @data[:parent] = xml_node['parent'].to_s.strip
         end
       end
 
