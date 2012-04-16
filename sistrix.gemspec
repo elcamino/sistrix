@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sistrix}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tobias Begalke"]
-  s.date = %q{2012-04-13}
+  s.date = %q{2012-04-16}
   s.description = %q{A ruby libary for the Sistrix web API}
   s.email = %q{elcamino@spyz.org}
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "lib/sistrix.rb",
     "lib/sistrix/base.rb",
     "lib/sistrix/config.rb",
+    "lib/sistrix/credits.rb",
     "lib/sistrix/domain.rb",
     "lib/sistrix/domain/age.rb",
     "lib/sistrix/domain/competitors/sem.rb",
@@ -59,11 +60,13 @@ Gem::Specification.new do |s|
     "lib/sistrix/monitoring/reports.rb",
     "lib/sistrix/record.rb",
     "sistrix.gemspec",
+    "spec/sistrix_credits.rb",
     "spec/sistrix_domain_spec.rb",
     "spec/sistrix_keyword_spec.rb",
     "spec/sistrix_links_spec.rb",
     "spec/sistrix_monitoring_spec.rb",
     "spec/spec_helper.rb",
+    "spec/xml/credits.xml",
     "spec/xml/domain.age.xml",
     "spec/xml/domain.competitors.sem.xml",
     "spec/xml/domain.competitors.seo.xml",
