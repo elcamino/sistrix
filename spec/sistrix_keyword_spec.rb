@@ -2,7 +2,6 @@
 
 require 'spec_helper'
 require 'sistrix'
-require 'pp'
 
 WebMock.disable_net_connect!
 include WebMock::API

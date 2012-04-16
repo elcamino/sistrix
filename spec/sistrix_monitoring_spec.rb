@@ -3,7 +3,6 @@
 require 'spec_helper'
 require 'sistrix'
 require 'digest/md5'
-require 'pp'
 
 
 
