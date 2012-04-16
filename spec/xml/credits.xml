@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Mon, 16 Apr 2012 07:23:56 GMT
+Server: Apache
+X-Robots-Tag: noarchive
+X-Answer: 42
+Vary: Accept-Encoding
+Content-Length: 176
+Connection: close
+Content-Type: text/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <api_key/>
+  <method>credits</method>
+  <answer>
+    <credits value="40000"/>
+  </answer>
+  <credits used="0"/>
+</response>
